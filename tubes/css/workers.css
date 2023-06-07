@@ -1,0 +1,209 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+
+}
+
+body {
+
+    font-family: 'Lato', sans-serif;
+
+}
+
+.sidebar {
+
+    background-color: #A4DDB9;
+    position: fixed;
+    width: 260px;
+    height: 100vh;
+    border-radius: 0px 25px 25px 0px;
+
+}
+
+.logo {
+
+    margin: 35px 20px 50px 83px;
+
+}
+
+.sidebar .buttons ul li {
+
+    margin-top: 25px;
+    margin-left: 25px;
+
+}
+
+.sidebar .buttons ul {
+
+    list-style-type: none;
+    
+}
+
+.sidebar .buttons ul li a {
+
+    text-decoration: none;
+    color: #000000;
+
+}
+
+.sidebar .logout ul {
+
+    list-style-type: none;
+
+}
+
+.sidebar .logout ul li {
+
+    margin-top: 80px;
+    margin-left: 25px;
+
+}
+
+.sidebar .logout ul li a {
+
+    text-decoration: none;
+    color: #000000;
+
+}
+
+.sidebar .logout ul li a span {
+
+    margin-left: 51px;
+    margin-bottom: 20px;
+
+}
+
+.sidebar .buttons ul li .home span {
+
+    margin-left: 39px;
+
+}
+
+.sidebar .buttons ul li .workers span {
+    
+    margin-left: 48px;
+
+}
+
+.sidebar .buttons ul li .reports span {
+
+    margin-left: 51px;
+
+}
+
+.sidebar .buttons ul li .stats span {
+
+    margin-left: 46px;
+
+}
+
+.sidebar .buttons ul li .orders span {
+
+    margin-left: 53px;
+
+}
+
+.sidebar .buttons ul li .messages span {
+
+    margin-left: 44px;
+
+}
+
+.sidebar .buttons ul li .settings span {
+
+    margin-left: 49px;
+
+}
+
+.sidebar .buttons ul li .account span {
+
+    margin-left: 35px;
+
+}
+
+.sidebar .buttons ul li .new span {
+
+    margin-left: 35px;
+
+}
+
+.sidebar .buttons ul li > span {
+
+    font-size: 17px;
+
+}
+
+/* Section */
+
+.employees {
+
+    margin-left: 280px;
+
+}
+
+.employees .top {
+
+    padding-top: 1.4rem;
+    margin-bottom: 3rem;
+
+}
+
+.employees .worker-table table {
+
+    background: #fff;
+    width: 100%;
+    border-radius: 2rem;
+    padding: 1.8rem;
+    text-align: center;
+    box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+    width: 70%;
+
+}
+
+.employees .worker-table table:hover {
+
+    box-shadow: none;
+
+}
+
+.employees table tbody td {
+
+    height: 2.8rem;
+    border: 1px solid rgba(139, 132, 200, 0.18);
+    color: #677483;
+
+}
+
+.employees table tbody tr:last-child td{
+
+    border: none;
+
+}
+
+.employees .worker-table table tbody tr .propic {
+
+    width: 40px;
+
+}
+
+.employees .butt .new-worker {
+
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 10px 60px 10px 60px;
+    border-radius: 10px;
+    background-color: #0ACD6C;
+    color: #000000;
+
+}
+
+.employees .butt .new-worker a {
+
+    text-decoration: none;
+
+}

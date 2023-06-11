@@ -15,7 +15,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.before.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
@@ -36,7 +36,9 @@
 
         <div class="navbar-icons">
 
-            <a href="login.php">Login</a>
+            <a href="#" id= "search"><i data-feather="search"></i></a>
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="admin/admin.php"><i data-feather="user"></i></a>
 
         </div>
 

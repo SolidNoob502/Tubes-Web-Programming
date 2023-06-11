@@ -1,3 +1,16 @@
+<?php 
+
+    require '../function.php';
+
+    // Retrieve worker data from database
+
+    $sql = "SELECT * FROM workers";
+    $result = connection() -> query($sql);
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -192,93 +205,32 @@
 
                 <tbody>
 
+                <?php
+                     // Fetch worker data from the database
+                    $sql = "SELECT * FROM workers";
+                    $result = connection()->query($sql);
+
+                    // Check if there are any rows returned
+                    if ($result->num_rows > 0) {
+                    // Loop through each row and display the worker data
+                    while ($row = $result->fetch_assoc()) {
+                ?>
                     <tr>
-
-                        <td><img src="../img/default2.jpeg" alt="" class= "propic"></td>
-                        <td>John Aberdeen</td>
-                        <td>30 February 2023</td>
-                        <td>johnDeen@gmail.com</td>
-                        <td>+62845178524</td>
-                        <td>$1,500</td>
-
+                        <td><img src="../img/default2.jpeg" alt="" class="propic"></td>
+                        <td><?php echo $row["name"]; ?></td>
+                        <td><?php echo $row["date_joined"]; ?></td>
+                        <td><?php echo $row["email"]; ?></td>
+                        <td><?php echo $row["phone_number"]; ?></td>
+                        <td><?php echo $row["salary"]; ?></td>
+                        <td>Fire</td>
                     </tr>
-                    <hr>
-                    <tr>
+                <?php
+                    }
+                    } else {
+                        echo "<tr><td colspan='7'>No workers found.</td></tr>";
+                }
 
-                        <td><img src="../img/default2.jpeg" alt="" class= "propic"></td>
-                        <td>John Aberdeen</td>
-                        <td>30 February 2023</td>
-                        <td>johnDeen@gmail.com</td>
-                        <td>+62845178524</td>
-                        <td>$1,500</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td><img src="../img/default2.jpeg" alt="" class= "propic"></td>
-                        <td>John Aberdeen</td>
-                        <td>30 February 2023</td>
-                        <td>johnDeen@gmail.com</td>
-                        <td>+62845178524</td>
-                        <td>$1,500</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td><img src="../img/default2.jpeg" alt="" class= "propic"></td>
-                        <td>John Aberdeen</td>
-                        <td>30 February 2023</td>
-                        <td>johnDeen@gmail.com</td>
-                        <td>+62845178524</td>
-                        <td>$1,500</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td><img src="../img/default2.jpeg" alt="" class= "propic"></td>
-                        <td>John Aberdeen</td>
-                        <td>30 February 2023</td>
-                        <td>johnDeen@gmail.com</td>
-                        <td>+62845178524</td>
-                        <td>$1,500</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td><img src="../img/default2.jpeg" alt="" class= "propic"></td>
-                        <td>John Aberdeen</td>
-                        <td>30 February 2023</td>
-                        <td>johnDeen@gmail.com</td>
-                        <td>+62845178524</td>
-                        <td>$1,500</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td><img src="../img/default2.jpeg" alt="" class= "propic"></td>
-                        <td>John Aberdeen</td>
-                        <td>30 February 2023</td>
-                        <td>johnDeen@gmail.com</td>
-                        <td>+62845178524</td>
-                        <td>$1,500</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td><img src="../img/default2.jpeg" alt="" class= "propic"></td>
-                        <td>John Aberdeen</td>
-                        <td>30 February 2023</td>
-                        <td>johnDeen@gmail.com</td>
-                        <td>+62845178524</td>
-                        <td>$1,500</td>
-
-                    </tr>
+                ?>
 
                 </tbody>
 
@@ -290,7 +242,7 @@
 
             <button class= "new-worker">
 
-                <a href="#">
+                <a href="worker.new.php">
 
                     Add New Worker
 

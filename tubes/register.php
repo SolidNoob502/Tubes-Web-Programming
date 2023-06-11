@@ -1,3 +1,42 @@
+<?php 
+
+    require 'function.php';
+
+        // to Retrieve form data
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+
+        $fullName = $_POST['full_name'];
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $phoneNumber = $_POST['phone_number'];
+        $password = $_POST['password'];
+
+        // to insert form data into the "users" table
+
+        $sql = "INSERT INTO users (full_name, username, email, phone_number, password)
+                VALUES ('$fullName', '$username', '$email', '$phoneNumber', '$password')";
+
+
+        // execute the sql query
+
+        if (connection() -> query($sql) === TRUE) {
+
+            // Redirect to login form after successful registration
+            header("Location: login.php");
+            exit;
+
+        } else {
+
+            echo "Error: " . $sql . "<br>" . $conn -> error;
+
+        }
+
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +51,9 @@
     <link rel="stylesheet" href="css/register.css">
 
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto+Slab:wght@700&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -20,55 +62,55 @@
 
         <div class= "logo">
 
-            <h2>LOGO</h2>
+            <h2>Register</h2>
 
         </div>
 
         <div class= "regist-form">
 
-            <form action="#">
+            <form action="register.php" method="post">
 
                 <div class= "user-details">
 
                     <div class= "input-box">
 
                         <span class= "details">Full Name</span>
-                        <input type="text" placeholder="Put yo fuckin name here" required>
+                        <input type="text" name="full_name" placeholder="Put yo fuckin name here" required>
 
                     </div>
 
                     <div class= "input-box">
 
                         <span class= "details">Username</span>
-                        <input type="text" placeholder="Put yo fuckin name here" required>
+                        <input type="text" name="username" placeholder="Put yo fuckin name here" required>
 
                     </div>
 
                     <div class= "input-box">
 
                         <span class= "details">Email</span>
-                        <input type="text" placeholder="Put yo fuckin name here" required>
+                        <input type="text" name="email" placeholder="Put yo fuckin name here" required>
 
                     </div>
 
                     <div class= "input-box">
 
                         <span class= "details">Phone Number</span>
-                        <input type="text" placeholder="Put yo fuckin name here" required>
+                        <input type="text" name="phone_number" placeholder="Put yo fuckin name here" required>
 
                     </div>
 
                     <div class= "input-box">
 
                         <span class= "details">Password</span>
-                        <input type="text" placeholder="Put yo fuckin name here" required>
+                        <input type="password" name="password" placeholder="Put yo fuckin name here" required>
 
                     </div>
 
                     <div class= "input-box">
 
                         <span class= "details">Confirm Password</span>
-                        <input type="text" placeholder="Put yo fuckin name here" required>
+                        <input type="password" placeholder="Put yo fuckin name here" required>
 
                     </div>
 
@@ -111,7 +153,7 @@
 
                 <div class= "button">
 
-                    <input type="submit" name="" id="" value= "Register">
+                    <input type="submit" name="submit" id="" value= "Submit">
 
                 </div>
 

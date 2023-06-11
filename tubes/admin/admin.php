@@ -84,7 +84,7 @@
     
                 <li>
     
-                    <a href="orders.html" class= "orders">
+                    <a href="orders.php" class= "orders">
     
                         <i data-feather="shopping-cart"></i>
                         <span>Orders</span>
@@ -360,7 +360,7 @@
 
             </div>
 
-            <a href="#">Show All</a>
+            <a href="orders.php">Show All</a>
 
         </div>
 

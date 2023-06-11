@@ -207,3 +207,9 @@ body {
     text-decoration: none;
 
 }
+
+.employees .worker-table tbody tr .danger {
+
+    color: red;
+
+}

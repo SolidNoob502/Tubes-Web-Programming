@@ -81,6 +81,31 @@ body {
 
     color: white;
     margin: 0 0.5rem;
+    font-size: 1.4rem;
+    display: inline-block;
+
+}
+
+.navbar .navbar-icons a:hover {
+
+    color: yellow;
+
+}
+
+.navbar .navbar-icons a::after {
+
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid yellow;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+
+}
+
+.navbar .navbar-icons a:hover::after {
+
+    transform: scaleX(0.5);
 
 }
 

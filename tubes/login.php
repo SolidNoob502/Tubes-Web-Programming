@@ -88,13 +88,13 @@
 
                     <div class= "forgot-password">
 
-                        <p>Forgot your password?<a href="#">TRY REMEMBERING IT SHITHEAD</a></p>
+                        <p>Forgot your password?<a href="#">Click here to help you remember</a></p>
 
                     </div>
                     
                     <div class= "member">
 
-                        <p>Don't have an account?<a href="register.php">MAKE ONE NOW HERE</a></p>
+                        <p>Don't have an account?<a href="register.php">Make one now here</a></p>
 
                     </div>
 

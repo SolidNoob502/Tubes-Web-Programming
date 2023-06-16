@@ -75,42 +75,42 @@
                     <div class= "input-box">
 
                         <span class= "details">Full Name</span>
-                        <input type="text" name="full_name" placeholder="Put yo fuckin name here" required>
+                        <input type="text" name="full_name" placeholder="Please put your name here" required>
 
                     </div>
 
                     <div class= "input-box">
 
                         <span class= "details">Username</span>
-                        <input type="text" name="username" placeholder="Put yo fuckin name here" required>
+                        <input type="text" name="username" placeholder="And your username here" required>
 
                     </div>
 
                     <div class= "input-box">
 
                         <span class= "details">Email</span>
-                        <input type="text" name="email" placeholder="Put yo fuckin name here" required>
+                        <input type="text" name="email" placeholder="Finally your email here" required>
 
                     </div>
 
                     <div class= "input-box">
 
                         <span class= "details">Phone Number</span>
-                        <input type="text" name="phone_number" placeholder="Put yo fuckin name here" required>
+                        <input type="text" name="phone_number" placeholder="Now we want your phone number here" required>
 
                     </div>
 
                     <div class= "input-box">
 
                         <span class= "details">Password</span>
-                        <input type="password" name="password" placeholder="Put yo fuckin name here" required>
+                        <input type="password" name="password" placeholder="Please put a strong password here" required>
 
                     </div>
 
                     <div class= "input-box">
 
                         <span class= "details">Confirm Password</span>
-                        <input type="password" placeholder="Put yo fuckin name here" required>
+                        <input type="password" placeholder="Type the same password as before" required>
 
                     </div>
 
@@ -143,7 +143,7 @@
                         <label for="dot-3">
 
                             <span class= "dot three"></span>
-                            <span class= "gender">Nunya fuckin business</span>
+                            <span class= "gender">I rather not say</span>
 
                         </label>
 
